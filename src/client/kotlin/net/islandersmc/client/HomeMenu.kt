@@ -12,16 +12,65 @@ class HomeMenu : Screen(Component.literal("Home Menu")) {
         val buttonWidth = 200
         val buttonHeight = 20
         val x = (width - buttonWidth) / 2
-        val y = height / 2
-        //test button
+        val y = height / 2 - 72
+        //rtp button
         addRenderableWidget(
-            Button.builder(Component.literal("testing")) { _ ->
+            Button.builder(Component.literal("Random Teleport")) { _ ->
+                //action
+                Minecraft.getInstance().player?.connection?.sendCommand(
+                    "rtp"
+                )
+                onClose()
+            }
+                .bounds(x, y, buttonWidth, buttonHeight)
+                .build()
+        )
+        //spawn button
+        addRenderableWidget(
+            Button.builder(Component.literal("Tp to spawn")) { _ ->
                 //action
                 Minecraft.getInstance().player?.connection?.sendCommand(
                     "spawn"
                 )
+                onClose()
             }
-                .bounds(x, y, buttonWidth, buttonHeight)
+                .bounds(x, y+ 24, buttonWidth, buttonHeight)
+                .build()
+        )
+        //home button
+        addRenderableWidget(
+            Button.builder(Component.literal("Tp to home")) { _ ->
+                //action
+                Minecraft.getInstance().player?.connection?.sendCommand(
+                    "home home"
+                )
+                onClose()
+            }
+                .bounds(x, y+ 48, buttonWidth, buttonHeight)
+                .build()
+        )
+        //claim button
+        addRenderableWidget(
+            Button.builder(Component.literal("Tp to claim")) { _ ->
+                //action
+                Minecraft.getInstance().player?.connection?.sendCommand(
+                    "hs tp"
+                )
+                onClose()
+            }
+                .bounds(x, y+ 72, buttonWidth, buttonHeight)
+                .build()
+        )
+        //bed button
+        addRenderableWidget(
+            Button.builder(Component.literal("Tp to bed")) { _ ->
+                //action
+                Minecraft.getInstance().player?.connection?.sendCommand(
+                    "home bed"
+                )
+                onClose()
+            }
+                .bounds(x, y+ 96, buttonWidth, buttonHeight)
                 .build()
         )
         //close button ig
@@ -30,7 +79,7 @@ class HomeMenu : Screen(Component.literal("Home Menu")) {
                 //close menu
                 onClose()
             }
-                .bounds(x, y + 24, buttonWidth, buttonHeight)
+                .bounds(x, y + 120, buttonWidth, buttonHeight)
                 .build()
         )
     }
@@ -43,13 +92,13 @@ class HomeMenu : Screen(Component.literal("Home Menu")) {
     ) {
         super.extractRenderState(graphics, mouseX, mouseY, delta)
 
-        val heading = "Home Menu"
+        val heading = "Teleport Menu"
 
         graphics.text(
             font,
             heading,
             (width - font.width(heading)) /2,
-            height /2 -30,
+            height /2 -102,
             0xFFFFFFFFF.toInt(),
             true
         )
