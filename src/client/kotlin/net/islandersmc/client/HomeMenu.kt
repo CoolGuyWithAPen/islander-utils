@@ -6,7 +6,7 @@ import net.minecraft.client.gui.components.Button
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.network.chat.Component
 
-class HomeMenu : Screen(Component.literal("Home Menu")) {
+class HomeMenu : Screen(Component.literal("Teleport Menu")) {
 
     override fun init() {
         val buttonWidth = 200
@@ -27,7 +27,7 @@ class HomeMenu : Screen(Component.literal("Home Menu")) {
         )
         //spawn button
         addRenderableWidget(
-            Button.builder(Component.literal("Tp to spawn")) { _ ->
+            Button.builder(Component.literal("Spawn")) { _ ->
                 //action
                 Minecraft.getInstance().player?.connection?.sendCommand(
                     "spawn"
@@ -39,7 +39,7 @@ class HomeMenu : Screen(Component.literal("Home Menu")) {
         )
         //home button
         addRenderableWidget(
-            Button.builder(Component.literal("Tp to home")) { _ ->
+            Button.builder(Component.literal("Home")) { _ ->
                 //action
                 Minecraft.getInstance().player?.connection?.sendCommand(
                     "home home"
@@ -51,10 +51,10 @@ class HomeMenu : Screen(Component.literal("Home Menu")) {
         )
         //claim button
         addRenderableWidget(
-            Button.builder(Component.literal("Tp to claim")) { _ ->
+            Button.builder(Component.literal("Claim")) { _ ->
                 //action
                 Minecraft.getInstance().player?.connection?.sendCommand(
-                    "hs tp"
+                    "hs home"
                 )
                 onClose()
             }
@@ -63,7 +63,7 @@ class HomeMenu : Screen(Component.literal("Home Menu")) {
         )
         //bed button
         addRenderableWidget(
-            Button.builder(Component.literal("Tp to bed")) { _ ->
+            Button.builder(Component.literal("Bed")) { _ ->
                 //action
                 Minecraft.getInstance().player?.connection?.sendCommand(
                     "home bed"
@@ -98,7 +98,7 @@ class HomeMenu : Screen(Component.literal("Home Menu")) {
             font,
             heading,
             (width - font.width(heading)) /2,
-            height /2 -102,
+            height /2 -96,
             0xFFFFFFFFF.toInt(),
             true
         )

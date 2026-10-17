@@ -170,9 +170,14 @@ key_key.debug.profilingChart:key.keyboard.1
 key_key.debug.fpsCharts:key.keyboard.2
 key_key.debug.networkCharts:key.keyboard.3
 key_key.debug.lightmapTexture:key.keyboard.4
-key_key.islanderutils.test_message:key.keyboard.j
+key_key.islanderutils.tpMenu:key.keyboard.right.shift
+key_key.islanderutils.rtp_key:key.keyboard.keypad.1
+key_key.islanderutils.spawn_key:key.keyboard.keypad.2
+key_key.islanderutils.home_key:key.keyboard.keypad.5
+key_key.islanderutils.claim_key:key.keyboard.keypad.4
+key_key.islanderutils.bed_key:key.keyboard.keypad.3
 soundCategory_master:1.0
-soundCategory_music:1.0
+soundCategory_music:0.0
 soundCategory_record:1.0
 soundCategory_weather:1.0
 soundCategory_block:1.0
