@@ -11,10 +11,13 @@ import net.minecraft.resources.Identifier
 object IslanderUtilsClient : ClientModInitializer {
 	override fun onInitializeClient() {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
+
+		//Categories for keybinds
 		val category = KeyMapping.Category.register(
 			Identifier.fromNamespaceAndPath("islanderutils", "general")
 		)
 
+		//Keymappings
 		val testKey = KeyMappingHelper.registerKeyMapping(
 			KeyMapping(
 				"key.islanderutils.test_message",
@@ -24,6 +27,7 @@ object IslanderUtilsClient : ClientModInitializer {
 			)
 		)
 
+		//Register keypress
 		ClientTickEvents.END_CLIENT_TICK.register { client ->
 			while (testKey.consumeClick()) {
 				client.player?.sendSystemMessage(
