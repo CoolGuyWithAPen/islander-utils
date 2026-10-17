@@ -1,0 +1,51 @@
+{
+	"schemaVersion": 1,
+	"id": "islander-utils",
+	"version": "1.0.0",
+	"name": "Islander Utils",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/islander-utils/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "net.islandersmc.IslanderUtils",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "net.islandersmc.client.IslanderUtilsClient",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "net.islandersmc.client.IslanderUtilsDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"islander-utils.mixins.json",
+		{
+			"config": "islander-utils.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	}
+}
