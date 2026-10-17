@@ -5,4 +5,4 @@ Under active development!
 - Adds a teleport menu
 - Adds keybinds for every teleport button in the teleport menu
 
-Yeah that's it... Under development as I said.
+Yeah, that's it... Under development as I said.
