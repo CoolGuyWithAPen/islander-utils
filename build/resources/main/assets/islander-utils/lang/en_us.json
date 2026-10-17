@@ -1,9 +1,9 @@
 {
   "key.category.islanderutils.general": "Islander Utils (designed for Islanders MC)",
   "key.islanderutils.tpMenu": "Open quick teleport menu",
-  "key.islanderutils.rtp_key": "Runs the random teleport",
-  "key.islanderutils.spawn_key": "Teleports you to spawn",
-  "key.islanderutils.home_key": "Teleports you to your home",
-  "key.islanderutils.claim_key": "Teleports you to your claim",
-  "key.islanderutils.bed_key": "Teleports you to your bed"
+  "key.islanderutils.rtp_key": "Runs RTP",
+  "key.islanderutils.spawn_key": "Tp to spawn",
+  "key.islanderutils.home_key": "Tp to your home",
+  "key.islanderutils.claim_key": "Tp to your claim",
+  "key.islanderutils.bed_key": "Tp to your bed"
 }

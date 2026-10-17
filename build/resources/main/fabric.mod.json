@@ -3,9 +3,10 @@
 	"id": "islander-utils",
 	"version": "1.0.0",
 	"name": "Islander Utils",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A bunch of useful additions to enhance your experience on Islanders MC!",
 	"authors": [
-		"CoolGuyWithAPen"
+		"CoolGuyWithAPen",
+		"Islanders MC organization"
 	],
 	"contact": {
 		"homepage": "https://islandersmc.net/",
