@@ -17,8 +17,8 @@ class HomeMenu : Screen(Component.literal("Home Menu")) {
         addRenderableWidget(
             Button.builder(Component.literal("testing")) { _ ->
                 //action
-                Minecraft.getInstance().player?.sendSystemMessage(
-                    Component.literal("Hm, seems like you pressed it")
+                Minecraft.getInstance().player?.connection?.sendCommand(
+                    "spawn"
                 )
             }
                 .bounds(x, y, buttonWidth, buttonHeight)
@@ -27,6 +27,7 @@ class HomeMenu : Screen(Component.literal("Home Menu")) {
         //close button ig
         addRenderableWidget(
             Button.builder(Component.literal("Close")) { _ ->
+                //close menu
                 onClose()
             }
                 .bounds(x, y + 24, buttonWidth, buttonHeight)

@@ -11,7 +11,7 @@
 		"homepage": "https://islandersmc.net/",
 		"sources": "https://github.com/CoolGuyWithAPen/islander-utils"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/islander-utils/icon.png",
 	"environment": "*",
 	"entrypoints": {
