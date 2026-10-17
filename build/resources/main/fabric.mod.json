@@ -5,11 +5,11 @@
 	"name": "Islander Utils",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"CoolGuyWithAPen"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://islandersmc.net/",
+		"sources": "https://github.com/CoolGuyWithAPen/islander-utils"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/islander-utils/icon.png",
