@@ -30,10 +30,11 @@ object IslanderUtilsClient : ClientModInitializer {
 		//Register keypress
 		ClientTickEvents.END_CLIENT_TICK.register { client ->
 			while (testKey.consumeClick()) {
-				client.player?.sendSystemMessage(
-					Component.literal("Hm, seems like you pressed it")
-				)
+				client.gui.setScreen(HomeMenu())
 			}
 		}
+
+
+
 	}
 }
